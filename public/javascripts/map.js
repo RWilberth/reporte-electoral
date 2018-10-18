@@ -7,3 +7,9 @@ Cesium.Ion.defaultAccessToken =
 		infoBox: false
 
 	});
+	viewer.dataSources.add(Cesium.KmlDataSource.load('./kml/senadores.kmz',
+     {
+          camera: viewer.scene.camera,
+          canvas: viewer.scene.canvas
+     })
+	);
