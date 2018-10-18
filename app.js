@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+var homeRouter = require('./routes/home.routes');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -22,7 +22,7 @@ app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
-app.use('/', indexRouter);
+app.use('/', homeRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
@@ -44,5 +44,4 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 module.exports = app;

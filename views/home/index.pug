@@ -1,0 +1,10 @@
+extends ../shared/mainlayout
+block styles
+	link(rel='stylesheet', href='/bower_components/cesium.js/dist/Widgets/widgets.css')
+
+block content
+	.container
+		#cesiumContainer
+block scripts
+	script(src='/bower_components/cesium.js/dist/Cesium.js')
+	script(src='/javascripts/map.js')
