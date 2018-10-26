@@ -6,4 +6,8 @@ var HomeController = {
 	}
 };
 
+//HomeController.post('/upload', function(req, res) {
+  //console.log(req.files.file); // the uploaded file object
+//});
+
 module.exports= HomeController;

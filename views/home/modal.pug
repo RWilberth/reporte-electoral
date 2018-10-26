@@ -1,0 +1,15 @@
+#importModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='importador de archivo', aria-hidden='true')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title Importador
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+          .modal-body
+              div
+                label(for='file') Archivo:
+                br
+                input#file(type='file', @change='onFileChange' name='file', accept='.kmz, .kml')
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Cerrar
+            button.btn.btn-primary(type='button', @click='onUpload') Importar

@@ -3,8 +3,11 @@ block styles
 	link(rel='stylesheet', href='/bower_components/cesium.js/dist/Widgets/widgets.css')
 
 block content
-	.container
+		#app.container
+				import-btn
+				include modal.pug
 		#cesiumContainer
 block scripts
 	script(src='/bower_components/cesium.js/dist/Cesium.js')
+	script(src='/javascripts/home/import_file.js')
 	script(src='/javascripts/map.js')
