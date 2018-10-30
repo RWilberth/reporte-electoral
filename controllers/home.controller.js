@@ -3,6 +3,12 @@ var HomeController = {
 	Index: function(req, res, next){
 		var title = 'Reportes electorales';
 		return res.render('home/index', { title:title });	
+	},
+	ImportFile: function(req, res, next){
+		console.log(req.file.originalname);
+		res.json({
+        message: 'File uploaded successfully',
+      });
 	}
 };
 

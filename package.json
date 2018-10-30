@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "webpack": "webpack --mode development"
   },
   "dependencies": {
     "bower": "^1.8.4",
@@ -12,10 +13,26 @@
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "express-fileupload": "^1.0.0",
+    "form-data": "^2.3.3",
     "http-errors": "^1.6.3",
     "less-middleware": "~2.2.1",
     "morgan": "~1.9.0",
+    "multer": "^1.4.1",
     "pug": "2.0.0-beta11",
-    "vue-resource": "^1.5.1"
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "gulp-babel": "^8.0.0",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
   }
 }

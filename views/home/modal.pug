@@ -9,7 +9,7 @@
               div
                 label(for='file') Archivo:
                 br
-                input#file(type='file', @change='onFileChange' name='file', accept='.kmz, .kml')
+                input#file(type='file', @change='onFileChange', name='file', accept='.kmz, .kml')
           .modal-footer
             button.btn.btn-secondary(type='button', data-dismiss='modal') Cerrar
             button.btn.btn-primary(type='button', @click='onUpload') Importar
