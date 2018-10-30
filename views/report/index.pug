@@ -1,0 +1,20 @@
+extends ../shared/mainlayout
+
+block content
+	#app.container
+			.row
+				.col-sm-4
+					line-chart(:data='chartData' :download='true' style='max-width:100%;')
+				.col-sm-4
+					pie-chart(:data='chartData' :download='true' style='max-width:100%;')
+				.col-sm-4
+					bar-chart(:data='chartData' :download='true' style='max-width:100%;')
+				.col-sm-4
+					column-chart(:data='chartData' :download='true' style='max-width:100%;')
+				.col-sm-4
+					area-chart(:data='chartData' :download='true' style='max-width:100%;')
+				.col-sm-4
+					scatter-chart(:data='chartData' :download='true' style='max-width:100%;')
+block scripts
+	script(src='/javascripts/report/index.js' type='module')
+	script(src='https://unpkg.com/axios/dist/axios.min.js')
