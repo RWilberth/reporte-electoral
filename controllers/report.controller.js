@@ -3,7 +3,7 @@ var ReportController = {
 	Index: function(req, res, next){
 		var title = 'Reportes electorales';
 		return res.render('report/index', { title:title });	
-	}
+	},
 	UploadTest: function(req, res, next){
 
 	}
